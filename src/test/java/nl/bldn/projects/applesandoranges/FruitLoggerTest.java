@@ -16,7 +16,6 @@ import static nl.bldn.projects.applesandoranges.FruitLogger.log;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FruitLoggerTest {
-
     private static Logger fruityLogger;
     private static ListAppender<ILoggingEvent> fruityLoggerAppender;
 
@@ -50,5 +49,4 @@ public class FruitLoggerTest {
         assertThat(loggedEvent.getFormattedMessage()).contains("body");
         assertThat(loggedEvent.getFormattedMessage()).contains("oranges");
     }
-
 }

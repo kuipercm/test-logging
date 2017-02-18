@@ -10,11 +10,12 @@ public class FruitLogger {
     static final Logger log = LoggerFactory.getLogger(FruitLogger.class);
 
     private FruitLogger() {
-        //don't instatiate
+        //don't instatiate outside this class
     }
 
     public void logAllFruitMessages(FruityMessage message) {
-        log.info("Outgoing message body: {}", message.getBody());
+        if (message != null) {
+            log.info("Outgoing message body: {}", message.getBody());
+        }
     }
-
 }
